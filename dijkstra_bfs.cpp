@@ -12,10 +12,11 @@ vector<pair<int, int>> v[N];
 vector<int> dis(N, inf), vis(N, 0);
 
 void dijkstra(int u){
+   
+  dis[u]=0;
   
   set<pair<int, int>> s;
-  s.insert({0,u});
-  dis[u]=0;
+  s.insert({dis[u], u});
 
   while(!s.empty()){
     auto node = *s.begin();
@@ -30,7 +31,7 @@ void dijkstra(int u){
     for(auto i: v[f]){
       if(dis[i.ff] > wt + i.ss){
         dis[i.ff] = wt + i.ss;
-        s.insert({dis[f] + i.ss, i.ff});
+        s.insert({dis[i.ff], i.ff});
       }
     }
   }
