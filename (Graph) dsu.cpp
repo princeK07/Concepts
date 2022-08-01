@@ -4,6 +4,7 @@ using namespace std;
 #define nl "\n"
 
 const int N = 1e5+10;
+int parent[N], size[N];
 
 void make(int v){
   parent[v]=v;
