@@ -1,3 +1,9 @@
+/*
+Time complexity: 
+  Binary Search: O(log(n))
+  If array is not sorted then sorting takes O(n*log(n))
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 
